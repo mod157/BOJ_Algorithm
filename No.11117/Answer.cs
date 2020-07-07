@@ -1,8 +1,8 @@
 using System;
 
-namespace Alr
+namespace Algorithm
 {
-    class Program
+    class Answer
     {
        static void Main(string[] args)
         {
