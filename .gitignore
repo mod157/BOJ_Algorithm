@@ -421,6 +421,7 @@ logs/
 .Thumbs.db
 .ehthumbs.db
 #=> VSCode
+.vsocde
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -428,4 +429,5 @@ logs/
 !.vscode/extensions.json
 
 Base
+bin
 Program.cs
