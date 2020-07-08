@@ -416,6 +416,7 @@ logs/
 *.zip
 *.gz
 *.jar
+*.csproj
 .Trashes
 .Thumbs.db
 .ehthumbs.db
@@ -427,3 +428,4 @@ logs/
 !.vscode/extensions.json
 
 Base
+Program.cs

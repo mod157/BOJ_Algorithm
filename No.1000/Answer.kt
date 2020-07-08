@@ -1,3 +1,6 @@
-fun main(args: Array<String>) {
-   println("Hello World!")
+import java.util.Scanner;
+fun main(args: Array<String>) = with(Scanner(System.`in`)) {
+   val a = nextInt()
+   val b = nextInt()
+   print(a + b)
 }
