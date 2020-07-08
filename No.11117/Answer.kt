@@ -1,5 +1,13 @@
 import java.util.*
 
-fun main(args: Array<String>) = with(Scanner(System.`in`)) {
-   println("AAA"),args[0];
+fun greeting() {
+   println("Hello World!")
 }
+
+fun main(args: Array<String>) {
+   greeting()
+}
+/* 
+fun main(args: Array<String>) = with(Scanner(System.`in`)) {
+   println("AAA");
+}*/
