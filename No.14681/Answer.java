@@ -1,0 +1,9 @@
+import java.util.Scanner;
+public class Answer{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+		int a = scan.nextInt();
+		int b = scan.nextInt();
+		System.out.print(a > 0 && b > 0? 1 : a < 0? b < 0? 3: 2: 4);
+    }
+}
