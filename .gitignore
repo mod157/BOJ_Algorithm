@@ -428,6 +428,5 @@ logs/
 !.vscode/launch.json
 !.vscode/extensions.json
 
-Base
 bin
 Program.cs
