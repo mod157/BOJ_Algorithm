@@ -1,8 +1,9 @@
 using System;
-class Answer{
+class AnswerClass{
+    public static StringBuilder sb = new StringBuilder();
     static void Main(string[] args)
     {
-       new Answer().Answer();
+       new AnswerClass().Answer();
     }
 
     public void Answer(){

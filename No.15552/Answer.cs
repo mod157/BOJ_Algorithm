@@ -9,11 +9,10 @@ class AnswerClass{
     public void Answer(){
         int n = int.Parse(Console.ReadLine());
         StringBuilder sb = new StringBuilder();
-        int a = 0, b = 0;
-        for(int i = 1; i <= n; i++){
-            a = Console.Read();
-            b = Console.Read();
-            sb.AppendLine((a+b).ToString());
+        int[] ab = new int[2];
+        for(int i = 0; i < n; i++){
+            ab = Array.ConvertAll(Console.ReadLine().Split(" "), s => int.Parse(s));
+            sb.AppendLine((ab[0]+ab[1]).ToString());
         }
         Console.Write(sb.ToString());
     }
