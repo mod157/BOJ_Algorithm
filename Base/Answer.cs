@@ -9,5 +9,7 @@ class AnswerClass{
 
     public void Answer(){
         int n = int.Parse(Console.ReadLine());
+
+        Console.Write(sb.ToString());
     }
 }

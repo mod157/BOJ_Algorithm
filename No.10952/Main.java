@@ -8,10 +8,16 @@ public class Main{
     }
     public void Answer(){
         try{
-            int n = Integer.parseInt(bf.readLine());
-
+            while(true){
+                StringTokenizer st = new StringTokenizer(bf.readLine());
+                int a = Integer.parseInt(st.nextToken());
+                int b = Integer.parseInt(st.nextToken());
+                if(a == 0 && b == 0){
+                   break;
+                }
+                sb.append(a + b + "\n");
+            }
             System.out.print(sb.toString());
-            
         }catch(IOException e){
             System.out.println(e);
         }
