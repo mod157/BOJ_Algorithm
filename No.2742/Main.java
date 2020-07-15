@@ -9,7 +9,10 @@ public class Main{
     public void Answer(){
         try{
             int n = Integer.parseInt(bf.readLine());
-            
+            for(int i = n; i > 0; i--){
+                sb.append(i+"\n");
+            }
+            System.out.print(sb.toString());
         }catch(IOException e){
             System.out.println(e);
         }

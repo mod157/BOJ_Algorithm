@@ -9,5 +9,9 @@ class AnswerClass{
 
     public void Answer(){
         int n = int.Parse(Console.ReadLine());
+        for(int i = n; i > 0; i--){
+            sb.AppendLine(i.ToString());
+        }
+        Console.Write(sb.ToString());
     }
 }
