@@ -9,17 +9,18 @@ public class Main{
     public void Answer(){
         try{
             int n = Integer.parseInt(bf.readLine());
-            for(int i = 1; i< 2*n; i++){
-                if( i <= n){
-                    for(int j = 0; j < i; j++){
-                        sb.append("*");
+            for(int i = 1; i <= n*2; i++){
+                if(i % 2 != 0){
+                    for(int j = 0; j < n; j++){
+                        sb.append(j % 2 != 0 ? " " : "*");
                     }
+                    sb.append("\n");
                 }else{
-                   for(int j = n*2 - i; j > 0; j--){
-                        sb.append("*");
-                    } 
+                    for(int j = 0; j < n; j++){
+                        sb.append(j % 2 == 0 ? " " : "*");
+                    }
+                    sb.append("\n");
                 }
-                sb.append("\n");
             }
             System.out.print(sb.toString());
             

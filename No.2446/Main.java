@@ -9,15 +9,21 @@ public class Main{
     public void Answer(){
         try{
             int n = Integer.parseInt(bf.readLine());
-            for(int i = 1; i< 2*n; i++){
-                if( i <= n){
-                    for(int j = 0; j < i; j++){
+            for(int i = 1; i <= n * 2 - 1; i++){
+                if(i <= n){
+                    for(int k = 1; k < i; k++){
+                        sb.append(" ");
+                    }
+                    for(int j = n * 2; j >= (i * 2); j--){
                         sb.append("*");
                     }
                 }else{
-                   for(int j = n*2 - i; j > 0; j--){
+                    for(int k = n*2 - 1; k > i; k--){
+                        sb.append(" ");
+                    }
+                    for(int j = n * 2; j <= i * 2; j++){
                         sb.append("*");
-                    } 
+                    }
                 }
                 sb.append("\n");
             }
