@@ -10,33 +10,21 @@ class AnswerClass{
 
     public void Answer(){
         int[] n = Array.ConvertAll(Console.ReadLine().Split(" "), int.Parse);
-        SortedSet<long> setList = new SortedSet<long>();
-
-        long[] values = new long[3];
-        for(int i = 0; i < values.Length; i++){
-           values[i] = n[i];
+        List<long> values = new List<long>();
+        int p1 = 0, p2 = 0, p3 = 0;
+        values.Add(1);
+        for(int i = 1; i <= n[3]; i++){
+            while(values[i-1] >= values[p1]*n[0]) p1++;
+            while(values[i-1] >= values[p2]*n[1]) p2++;
+            while(values[i-1] >= values[p3]*n[2]) p3++;
+            values.Add(Min(values[p1]*n[0],values[p2]*n[1]));
+            values[i] = Min(values[i], values[p3]*n[2]);
+            
         }
+        Console.Write(values[n[3]]);
+    }
 
-        long value = 0;
-        int min = 0;
-        
-        for(int i = 0; i < n[3]; i++){
-            for(int j = 1; j < values.Length; j++){
-                if(values[min] == values[j]){
-                    if(values[min] + n[min] > values[j] + n[j]){
-                        min = j;
-                        values[min] = values[min] + n[min];
-                        continue;
-                    }
-                }
-                if(values[min] > values[j]){
-                    min = j;
-                }
-            }
-            value = values[min];
-            values[min] += n[min];
-            min = 0;
-        }
-
+    public long Min(long value1, long value2){
+        return value1 > value2 ? value2 : value1;
     }
 }
