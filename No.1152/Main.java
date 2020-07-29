@@ -9,9 +9,12 @@ public class Main{
     }
     public void Answer(){
         try{
-            int n = Integer.parseInt(bf.readLine());
-
-            System.out.print(sb.toString());
+            String n = bf.readLine().trim();
+            if(n.isEmpty()){
+                System.out.print(0);
+            }else{
+                System.out.print(n.trim().split(" ").length);
+            }
             
         }catch(IOException e){
             System.out.println(e);

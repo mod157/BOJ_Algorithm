@@ -9,8 +9,11 @@ class AnswerClass{
     }
 
     public void Answer(){
-        int n = int.Parse(Console.ReadLine());
-
-        Console.Write(sb.ToString());
+        String n = Console.ReadLine().Trim();
+        if(n.Equals("")){
+            Console.Write(0);
+        }else{
+            Console.Write(n.Split(" ").Length);
+        }
     }
 }
