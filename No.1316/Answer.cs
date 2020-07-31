@@ -10,13 +10,26 @@ class AnswerClass{
 
     public void Answer(){
         int n = int.Parse(Console.ReadLine());
-        String s;
+        int answer = n;
+        int lastAlpha = 0;
+        char[] s;
+        int ascii = 0;
+
         for(int i = 0; i < n; i++){
-            s = Console.ReadLine();
-            for(int j = 0; j < s.Length; j++){
-                
+            s = Console.ReadLine().ToCharArray();
+            Boolean[] isAlpha = new Boolean[26];
+            foreach(char c in s){
+                ascii = c - 'a';
+                if(!isAlpha[ascii]){
+                    isAlpha[ascii] = true;    
+                }else if(lastAlpha != ascii){
+                    answer--;
+                    break;
+                }
+
+                lastAlpha = ascii;
             }
         }
-        Console.Write(sb.ToString());
+        Console.Write(answer);
     }
 }
