@@ -12,7 +12,7 @@ class AnswerClass{
     public void Answer()
     {
         int[] optionarr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-        List<int> basketList = new List<int>(optionarr[0] + 1); 
+        List<int> basketList = new List<int>(); 
         int valueCount = optionarr[0] + 1;
         int count = optionarr[1];
         int temp;
@@ -28,11 +28,6 @@ class AnswerClass{
         {
             int[] ijarr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
 
-            if (basketList[ijarr[0]] == 0)
-                basketList[ijarr[0]] = ijarr[0];
-            if (basketList[ijarr[1]] == 0)
-                basketList[ijarr[1]] = ijarr[1];
-
             if (ijarr[0] == ijarr[1])
                 continue;
 
@@ -43,8 +38,6 @@ class AnswerClass{
 
         for (int i = 1; i < basketList.Count; i++)
         {
-            if (basketList[i] == 0)
-                basketList[i] = i;
             sb.Append(basketList[i] + " ");
         }
         
