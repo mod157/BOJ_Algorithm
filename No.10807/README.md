@@ -1,8 +1,8 @@
-# No.25304 - 영수증
-Q Path - https://www.acmicpc.net/problem/25304
+# No.10807 - 개수 세기
+Q Path - https://www.acmicpc.net/problem/10807
 
 Language | Memory(KB) | RunTime(ms)
 ------------ | ------------- | ------
-C# | 5656 | 72
+C# | 5720 | 68
 Kotlin |  | 
 Java |  | 
