@@ -11,22 +11,52 @@ class AnswerClass{
 
     public void Answer()
     {
-        int[] inputarr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-        int[] varr = { 1, 1, 2, 2, 2, 8 };
-        for (int i = 0; i < varr.Length; i++)
+        int count = int.Parse(Console.ReadLine());
+        for (int i = -count + 1; i < count; i++)
         {
-            sb.Append($"{varr[i] - inputarr[i]} ");
+            sb.Append(' ', Math.Abs(i));
+            sb.Append('*', 2 * count - 1 - 2 * Math.Abs(i)); 
+            sb.AppendLine();
         }
         
-        Console.Write(sb.ToString().TrimEnd());
+        Console.WriteLine(sb.ToString());
     }
     
     public void Answer()
     {
-        int[] inputarr = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-        int[] varr = { 1, 1, 2, 2, 2, 8 };
+        int count = int.Parse(Console.ReadLine());
         
-        Console.Write($"{varr[0] - inputarr[0]} {varr[1] - inputarr[1]} {varr[2] - inputarr[2]} {varr[3] - inputarr[3]} {varr[4] - inputarr[4]} {varr[5] - inputarr[5]}");
+        for (int i = 0; i <= count; i++)
+        {
+            for (int k = count - i; k > 0; k--)
+            {
+                sb.Append(" ");
+            }
+
+            for (int j = 1; j < i * 2; j++)
+            {
+                sb.Append("*");
+            }
+
+            sb.AppendLine();
+        }
+        
+        for (int i = count - 1; i > 0; i--)
+        {
+            for (int k = i; k < count; k++)
+            {
+                sb.Append(" ");
+            }
+
+            for (int j = 1; j < i * 2; j++)
+            {
+                sb.Append("*");
+            }
+
+            sb.AppendLine();
+        }
+
+        Console.Write(sb.ToString());
     }
 
 }
